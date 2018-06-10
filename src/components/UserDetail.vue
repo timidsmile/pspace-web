@@ -1,7 +1,9 @@
 <template>
     <div class="UserDetail">
         <h1> 用户名: {{ resUsername }} </h1>
-        <h1> 邮箱: ...</h1>
+        <h1> 邮箱: {{email}} </h1>
+        <h1> 你的头像: {{avatarURL}} </h1>
+        <h1> 昵称: {{nickname}} </h1>
     </div>
 </template>
 
@@ -11,20 +13,27 @@
         name: "UserDetail",
         data: function () {
             return {
-                resUsername:""
+                resUsername:"",
+                email:"",
+                avatarURL:"",
+                nickname:""
             }
         },
         created(){
-            cv = this.getUserDetail();
+            this.getUserDetail();
         },
         methods: {
-            getUserDetail: function (evt) {
+            getUserDetail: function () {
                 var _this = this;
-                $.get('http://localhost:8080/test/welcome', {
-                    key: "mmm"
+                $.get('/api/passport/getUserInfo', {
                 }, function (res) {
-                    console.info(res)
-                    _this.resUsername = res
+                    console.log(res)
+                    var resonse = JSON.parse(JSON.stringify(res))
+                    var data = resonse.data
+                    _this.resUsername = data.userName
+                    _this.email = data.email
+                    _this.avatarURL = data.avatarURL
+                    _this.nickname = data.nickname
                 })
             }
         }

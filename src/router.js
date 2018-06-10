@@ -3,35 +3,42 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Register from './views/Register.vue'
+import Login from './views/Login.vue'
 import UserDetail from './views/UserDetail.vue'
 import UserSetting from './views/UserSetting.vue'
 
 Vue.use(Router)
 
 export default new Router({
+    mode: "history",
     routes: [
         {
-            path: '/',
+            path: '/page/',
             name: 'home',
             component: Home
         },
         {
-            path: '/about',
+            path: '/page/about',
             name: 'about',
             component: About
         },
         {
-            path: '/register',
+            path: '/page/register',
             name: 'register',
             component: Register
         },
+      {
+        path: '/page/login',
+        name: 'login',
+        component: Login
+      },
         {
-            path: '/userDetail',
+            path: '/page/userDetail',
             name: 'userDetail',
             component: UserDetail
         },
         {
-            path: '/userSetting',
+            path: '/page/userSetting',
             name: 'userSetting',
             component: UserSetting
         }

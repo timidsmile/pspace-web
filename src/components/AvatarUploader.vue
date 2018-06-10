@@ -1,7 +1,7 @@
 <template>
     <el-upload
             class="avatar-uploader"
-            action="https://jsonplaceholder.typicode.com/posts/"
+            action='/api/common/uploadAvatarImage'
             :show-file-list="false"
             :on-success="handleAvatarSuccess"
             :before-upload="beforeAvatarUpload">
@@ -21,7 +21,13 @@
         },
         methods: {
             handleAvatarSuccess(res, file) {
-                this.imageUrl = URL.createObjectURL(file.raw);
+              console.log(res)
+              console.log(file)
+
+              var resonse = JSON.parse(JSON.stringify(res))
+              var data = resonse.data
+              this.imageUrl = data.url
+              this.$emit("url-changed", data.url)
             },
             beforeAvatarUpload(file) {
                 const isJPG = file.type === 'image/jpeg';
