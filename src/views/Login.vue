@@ -20,6 +20,6 @@
 <style>
   .login {
     width: 40%;
-    margin:auto;
+    margin: auto;
   }
 </style>

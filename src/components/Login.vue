@@ -14,12 +14,12 @@
 
 <script>
   import $ from 'jquery'
+
   export default {
     name: "Login",
     data: function () {
       return {
-        formModel: {
-        }
+        formModel: {}
       }
     },
     methods: {
@@ -30,8 +30,14 @@
           userName: _this.formModel.name,
           passwd: _this.formModel.password,
         }, function (res) {
-          console.log(res)
-          window.location.href = '/page/userDetail'
+          var resonse = JSON.parse(JSON.stringify(res))
+          if (resonse.code != 0) {
+            // Alert.
+            alert(resonse.msg)
+          } else {
+            window.location.href = '/page/userDetail'
+          }
+
         })
       }
     }

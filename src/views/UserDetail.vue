@@ -1,25 +1,25 @@
 <template>
-    <div class="userDetail">
-        <UserDetail/>
-    </div>
+  <div class="userDetail">
+    <UserDetail/>
+  </div>
 </template>
 
 <script>
-    // @ is an alias to /src
-    import UserDetail from '@/components/UserDetail.vue'
+  // @ is an alias to /src
+  import UserDetail from '@/components/UserDetail.vue'
 
-    export default {
-        name: 'userDetail',
-        components: {
-            UserDetail
-        }
+  export default {
+    name: 'userDetail',
+    components: {
+      UserDetail
     }
+  }
 
 </script>
 
 <style>
-    .register {
-        width: 40%;
-        margin:auto;
-    }
+  .userDetail {
+    width: 40%;
+    margin: auto;
+  }
 </style>
