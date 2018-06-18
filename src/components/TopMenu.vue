@@ -7,7 +7,7 @@
     text-color="#fff"
     active-text-color="#ffd04b">
     <el-menu-item index="1"><a href="/page/circle">我的圈子</a></el-menu-item>
-    <el-menu-item index="2" disabled>我的博客</el-menu-item>
+    <el-menu-item index="2"><a href="/page/writeBlog">我的博客</a></el-menu-item>
     <el-menu-item index="3"><a href="/page/album">我的相册</a></el-menu-item>
     <el-submenu index="4">
       <template slot="title">用户中心</template>

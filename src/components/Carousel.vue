@@ -36,12 +36,12 @@
     data: function () {
       return {
         wonderfulImgs: {
-          0: "/static/images/1.jpeg",
-          1: "/static/images/2.jpeg",
-          2: "/static/images/3.jpeg",
-          3: "/static/images/4.jpeg",
-          4: "/static/images/5.jpeg",
-          5: "/static/images/6.jpeg"
+          0: "/static/images/system/1.jpeg",
+          1: "/static/images/system/2.jpeg",
+          2: "/static/images/system/3.jpeg",
+          3: "/static/images/system/4.jpeg",
+          4: "/static/images/system/5.jpeg",
+          5: "/static/images/system/6.jpeg"
         }
       }
     },

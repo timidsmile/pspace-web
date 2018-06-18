@@ -8,6 +8,8 @@ import UserDetail from './views/UserDetail.vue'
 import UserSetting from './views/UserSetting.vue'
 import Album from './views/album.vue'
 import Circle from './views/Circle.vue'
+import WriteBlog from './views/WriteBlog.vue'
+import Help from './views/Help.vue'
 
 Vue.use(Router)
 
@@ -53,6 +55,16 @@ export default new Router({
       path: '/page/circle',
       name: 'circle',
       component: Circle
+    },
+    {
+      path: '/page/writeBlog',
+      name: 'writeBlog',
+      component: WriteBlog
+    },
+    {
+      path: '/page/help',
+      name: 'help',
+      component: Help
     }
   ]
 })

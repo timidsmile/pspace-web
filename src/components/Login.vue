@@ -7,7 +7,7 @@
       <el-input v-model="formModel.password"></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="login">确定</el-button>
+      <el-button type="primary" @click="login">登录</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -32,7 +32,6 @@
         }, function (res) {
           var resonse = JSON.parse(JSON.stringify(res))
           if (resonse.code != 0) {
-            // Alert.
             alert(resonse.msg)
           } else {
             window.location.href = '/page/userDetail'
